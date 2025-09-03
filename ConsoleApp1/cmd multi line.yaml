@@ -1,0 +1,17 @@
+name: cmd multi line
+description: ""
+settings:
+  vcs-steps: []
+  build-steps:
+  - key: runner_cmd
+    name: one test
+    disabled: false
+    workDir: ""
+    args:
+      commands: |-
+        echo Running 1
+        nonexistent-command
+        echo Running 2
+      continueOnError: true
+    argsProtected: {}
+  artifacts: []
