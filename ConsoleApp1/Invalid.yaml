@@ -8,12 +8,10 @@ settings:
     disabled: false
     workDir: ""
     args:
+    env:
+      APP_ENV: "@{APP_ENV}"
       commands: |-
-        set -e
         echo "Reading environment variable..."
-        echo "ENVIRONMENT=@{APP_ENV}" > runtime.txt
-        echo "Generated runtime.txt:"
-        cat runtime.txt
       continueOnError: false
     argsProtected: {}
   artifacts: []
