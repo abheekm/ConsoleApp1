@@ -7,9 +7,9 @@ settings:
     name: one test
     disabled: false
     workDir: ""
+    args:
     env:
       APP_ENV: "@{APP_ENV}"
-    args:
       commands: |-
         set -e
         echo "Reading environment variable..."
