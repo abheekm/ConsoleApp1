@@ -9,9 +9,14 @@ settings:
     workDir: ""
     args:
       commands: |-
-        echo Running 1
-        nonexistent-command
-        echo Running 2
+        set -e
+        echo "Reading environment variable..."
+        echo "ENVIRONMENT=$APP_ENV" > runtime.txt
+        echo "Generated runtime.txt:"
+        echo "Checking OS environment for APP_ENV..."
+        env | grep APP_ENV || echo "APP_ENV not found in OS environment"
+        cat runtime.txt
+      continueOnError: false
       continueOnError: true
     argsProtected: {}
   artifacts: []
