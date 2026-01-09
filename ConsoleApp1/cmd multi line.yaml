@@ -7,6 +7,8 @@ settings:
     name: one test
     disabled: false
     workDir: ""
+    env:
+      APP_ENV: "@{APP_ENV}"
     args:
       commands: |-
         set -e
@@ -17,6 +19,5 @@ settings:
         env | grep APP_ENV || echo "APP_ENV not found in OS environment"
         cat runtime.txt
       continueOnError: false
-      continueOnError: true
     argsProtected: {}
   artifacts: []
