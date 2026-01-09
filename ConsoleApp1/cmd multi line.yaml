@@ -11,7 +11,7 @@ settings:
       commands: |-
         set -e
         echo "Reading environment variable..."
-        echo "ENVIRONMENT=$APP_ENV" > runtime.txt
+        echo "ENVIRONMENT=@{APP_ENV}" > runtime.txt
         echo "Generated runtime.txt:"
         echo "Checking OS environment for APP_ENV..."
         env | grep APP_ENV || echo "APP_ENV not found in OS environment"
