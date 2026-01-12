@@ -1,0 +1,16 @@
+name: app runtime
+description: ""
+settings:
+  vcs-steps: []
+  build-steps:
+  - key: runner_cmd
+    name: app start
+    disabled: false
+    workDir: ""
+    args:
+      commands: |-
+        echo ENVIRONMENT=DEFAULT > runtime.txt
+        echo PORT=0000 >> runtime.txt
+      continueOnError: false
+    argsProtected: {}
+  artifacts: []
