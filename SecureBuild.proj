@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <!-- Read password-type environment variable -->
-    <DeploySecret>$(ENV:DEPLOY_SECRET)</DeploySecret>
+    <DeploySecret>$(DEPLOY_SECRET)</DeploySecret>
   </PropertyGroup>
 
   <Target Name="ValidateSecret">
